@@ -9,7 +9,7 @@ pipeline {
             steps { 
 
 	dir('TrailRunner') { 
-                 bat 'mvn compile' 
+                 sh 'mvn compile' 
 
 		} 
 
@@ -25,7 +25,7 @@ stage('Test') {
 
                 dir('TrailRunner') { 
 
-                    bat 'mvn test' 
+                    sh 'mvn test' 
 
 		} 
 
