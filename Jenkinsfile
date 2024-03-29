@@ -9,7 +9,9 @@ pipeline {
             steps { 
 
 	dir('TrailRunner') { 
-                 sh 'mvn compile' 
+                withMaven{
+		sh 'mvn compile'
+		}
 
 		} 
 
