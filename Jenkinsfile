@@ -10,7 +10,7 @@ pipeline {
 
 	dir('TrailRunner') { 
                 
-		sh 'mvn compile'
+		sh 'mvn clean install'
 		
 
 		} 
