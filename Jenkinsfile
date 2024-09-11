@@ -33,31 +33,14 @@ pipeline {
 
 stage('Run Robot') {
             steps {
-                bat 'python -m robot                   path till robot projekt ‘        }
+                bat 'python -m robot -o results Selenium‘       }
  
             post {
                 always {
-                    robot outputPath:  path till din resultat av test               }
-            }
-        }
-
-
-
-
-
-inne i stage vill han ha en post  
-        stage('Run Robot Framework') {
-            steps {
-                dir('Selenium') {
-                   bat
+                    robot outputPath:results              }
                 }
             }
         }
-        stage('Robot Result') {
-            steps {
-                dir('Selenium') {
-                    robot outputPath: 'testresult'
-                }
-            }
-           
+    }
+}
 
