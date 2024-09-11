@@ -15,10 +15,10 @@ public void createNewRunner() {
 
  @Test
 public void newRound(){
-    int exepctedId = 1;
-        Round round = new Round (expectedId);
-        int actualId = round.getId();
-        assertEquals(expectedId, actualId);
+    int expectedId = 1;
+    Round round = new Round (expectedId);
+    int actualId = round.getId();
+    assertEquals(expectedId, actualId);
 
 }
 
